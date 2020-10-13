@@ -6,11 +6,11 @@ function LoginComponent(){
         <>
             <div className="container">
                 <h1>Login</h1>
-                <div className="container">
+                <div className="parent">
                     <label>Provide Information Here.</label><br></br>
                     <input className="input-box" type="input" placeholder="E-mail" required/><br></br>
-                    <input className="input-box" type="input" placeholder="Password" required /><br></br>
-                    <button className="btn btn-success">Submit</button>
+                    <input className="input-box" type="password" placeholder="Password" required /><br></br>
+                    <button className="btn btn-success login">Submit</button>
                 </div>
                 <h1>Don't have any account?</h1>
                 <h2>Signup <Link to="/signup">here</Link>.</h2>
