@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import ErrorComponent from './components/ErrorComponent.js'
 import HeaderComponent from './components/HeaderComponent.js'
 import FooterComponent from './components/FooterComponent.js'
-import WelcomeComponent from './components/WelcomeComponent.js'
+import HomeComponent from './components/HomeComponent.js'
 import './App.css';
 import './bootstrap.css';
 
@@ -15,7 +15,7 @@ class App extends Component {
           <>
             <HeaderComponent/>
               <Switch>
-                <Route path="/" exact component={WelcomeComponent}/>        
+                <Route path="/" exact component={HomeComponent}/>        
                 <Route component={ErrorComponent}/>
               </Switch>
             <FooterComponent/>
