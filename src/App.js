@@ -9,6 +9,8 @@ import MedicineComponent from './components/MedicineComponent.js'
 import DermatologyComponent from './components/DermatologyComponent.js'
 import CardiologyComponent from './components/CardiologyComponent.js'
 import DentalComponent from './components/DentalComponent.js'
+import SignupComponent from './components/SignupComponent.js'
+import LoginComponent from './components/LoginComponent.js'
 import './App.css';
 import './bootstrap.css';
 
@@ -20,12 +22,14 @@ class App extends Component {
           <>
             <HeaderComponent/>
               <Switch>
-                <Route path="/" exact component={HomeComponent}/>
-                <Route path="/department" component={DepartmentComponent}/>
-                <Route path="/department-medicine" component={MedicineComponent}/>
-                <Route path="/department-dermatology" component={DermatologyComponent}/>
-                <Route path="/department-cardiology" component={CardiologyComponent}/>
-                <Route path="/department-dental" component={DentalComponent}/>
+                <Route exact path="/" component={HomeComponent}/>
+                <Route exact path="/department" component={DepartmentComponent}/>
+                <Route exact path="/department/medicine" component={MedicineComponent}/>
+                <Route exact path="/department/dermatology" component={DermatologyComponent}/>
+                <Route exact path="/department/cardiology" component={CardiologyComponent}/>
+                <Route exact path="/department/dental" component={DentalComponent}/>
+                <Route exact path="/login" component={LoginComponent}/>
+                <Route exact path="/signup" component={SignupComponent}/>
                 <Route component={ErrorComponent}/>
               </Switch>
             <FooterComponent/>

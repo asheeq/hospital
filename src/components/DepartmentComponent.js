@@ -19,22 +19,22 @@ function DepartmentComponent(){
                             <tr>
                                 <td>{"Dermatology"}</td>
                                 <td>{"Skin problems and others"}</td>
-                                <td><Link to="/department-dermatology"><button className="btn btn-success">Visit</button></Link></td>
+                                <td><Link to="/department/dermatology"><button className="btn btn-success">Visit</button></Link></td>
                             </tr>
                             <tr>
                                 <td>{"Cardiology"}</td>
                                 <td>{"Heart problems and others"}</td>
-                                <td><Link to="/department-cardiology"><button className="btn btn-success">Visit</button></Link></td>
+                                <td><Link to="/department/cardiology"><button className="btn btn-success">Visit</button></Link></td>
                             </tr>
                             <tr>
                                 <td>{"Medicine"}</td>
                                 <td>{"Treatment on all sort of problems"}</td>
-                                <td><Link to="/department-medicine"><button className="btn btn-success">Visit</button></Link></td>
+                                <td><Link to="/department/medicine"><button className="btn btn-success">Visit</button></Link></td>
                             </tr>
                             <tr>
                                 <td>{"Dental"}</td>
                                 <td>{"Teeth and mouth"}</td>
-                                <td><Link to="/department-dental"><button className="btn btn-success">Visit</button></Link></td>
+                                <td><Link to="/department/dental"><button className="btn btn-success">Visit</button></Link></td>
                             </tr>
                         </tbody>
                     </table>

@@ -9,7 +9,7 @@ class WelcomeComponent extends Component {
                     <div className="main-title">
                     <h1>Welcome to Spring Hospital.</h1>
                     <p>Spring Hospital is one of the leading hospitals in Bangladesh.</p>
-                    <h3>Want an appointment? Click <Link to="/login">here</Link>.</h3>
+                    <h3>Want an appointment? Click <Link to="/department">here</Link>.</h3>
                     </div>
                 </div>
             </>
