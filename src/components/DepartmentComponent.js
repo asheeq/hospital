@@ -1,67 +1,20 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 
-function DepartmentComponent(){
+function DepartmentComponent() {
     return (
         <>
             <div className="container">
                 <h1>Departments</h1>
                 <div className="container">
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Visit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{"Dermatology"}</td>
-                                <td>{"Skin problems and others"}</td>
-                                <td><Link to="/department/dermatology"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Cardiology"}</td>
-                                <td>{"Heart problems and others"}</td>
-                                <td><Link to="/department/cardiology"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Medicine"}</td>
-                                <td>{"Treatment on all sort of problems"}</td>
-                                <td><Link to="/department/medicine"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Dental"}</td>
-                                <td>{"Teeth and mouth"}</td>
-                                <td><Link to="/department/dental"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Dermatology"}</td>
-                                <td>{"Skin problems and others"}</td>
-                                <td><Link to="/department/dermatology"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Cardiology"}</td>
-                                <td>{"Heart problems and others"}</td>
-                                <td><Link to="/department/cardiology"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Medicine"}</td>
-                                <td>{"Treatment on all sort of problems"}</td>
-                                <td><Link to="/department/medicine"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                            <tr>
-                                <td>{"Dental"}</td>
-                                <td>{"Teeth and mouth"}</td>
-                                <td><Link to="/department/dental"><button className="btn btn-success">Visit</button></Link></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <Link to="/department/dermatology"><button class="button button5"><span>Dermatology</span></button></Link>
+                    <Link to="/department/cardiology"><button class="button button5"><span>Cardiology</span></button></Link>
+                    <Link to="/department/medicine"><button class="button button5"><span>Medicine</span></button></Link>
+                    <Link to="/department/dental"><button class="button button5"><span>Dental</span></button></Link>
                 </div>
             </div>
         </>
-    )
+    )  
 }
 
 export default DepartmentComponent
