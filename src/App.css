@@ -86,6 +86,22 @@
 .button5:hover span {display:none}
 .button5:hover:before {content:"Visit"}
 
+.button6 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  width: 20%;
+}
+
+.button6:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.button6:hover span {display:none}
+.button6:hover:before {content:"View"}
+
+
 .App-link {
   color: #61dafb;
 }
