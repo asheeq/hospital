@@ -8,7 +8,7 @@ function LoginComponent(){
                 <h1>Login</h1>
                 <div className="parent">
                     <label>Provide Information Here.</label><br></br>
-                    <input className="input-box" type="input" placeholder="E-mail" required/><br></br>
+                    <input className="input-box" type="email" placeholder="E-mail" required/><br></br>
                     <input className="input-box" type="password" placeholder="Password" required /><br></br>
                     <button className="btn btn-success login">Submit</button>
                 </div>
