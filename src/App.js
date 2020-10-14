@@ -13,6 +13,9 @@ import SignupComponent from './components/SignupComponent.js'
 import LoginComponent from './components/LoginComponent.js'
 import AdminComponent from './components/AdminComponent.js'
 import DoctorApprovalComponent from './components/DoctorApprovalComponent.js'
+import PatientApprovalComponent from './components/PatientApprovalComponent.js'
+import AppointmentApprovalComponent from './components/AppointmentApprovalComponent.js'
+import SignupDoctorComponent from './components/SignupDoctorComponent.js'
 import './App.css';
 import './bootstrap.css';
 
@@ -34,6 +37,9 @@ class App extends Component {
                 <Route exact path="/signup" component={SignupComponent}/>
                 <Route exact path="/admin" component={AdminComponent}/>
                 <Route exact path="/admin/doctors" component={DoctorApprovalComponent}/>
+                <Route exact path="/admin/patients" component={PatientApprovalComponent}/>
+                <Route exact path="/admin/appointments" component={AppointmentApprovalComponent}/>
+                <Route exact path="/signup/doctor" component={SignupDoctorComponent}/>
                 <Route component={ErrorComponent}/>
               </Switch>
             <FooterComponent/>
