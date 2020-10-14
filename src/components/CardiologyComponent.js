@@ -6,7 +6,7 @@ class CardiologyComponent extends Component{
             doctors: [
                 { name: "Prof. A Rahman", designation: "MBBS FCPS FRCS", visitngTime: "Everyday 7pm to 10pm"},
                 { name: "Dr. B Rahman", designation: "MBBS FCPS", visitngTime: "Sunday to Thursday 4pm to 10pm"},
-                { name: "Dr. c Rahman", designation: "MBBS", visitngTime: "Monday to Wednesday 10am to 4pm"}
+                { name: "Dr. C Rahman", designation: "MBBS", visitngTime: "Monday to Wednesday 10am to 4pm"}
             ]
         }
     }
