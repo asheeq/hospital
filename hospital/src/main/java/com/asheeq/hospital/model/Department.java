@@ -8,17 +8,17 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "department_id")
-    private Long id;
+    private Long departmentId;
 
     @Column(name = "department_name", nullable = false)
     private String departmentName;
 
-    public Long getId() {
-        return id;
+    public Long getDepartmentId() {
+        return departmentId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
     }
 
     public String getDepartmentName() {

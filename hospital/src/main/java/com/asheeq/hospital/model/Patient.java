@@ -8,7 +8,7 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "patient_id")
-    private Long id;
+    private Long patientId;
 
     @Column(name = "patient_name", nullable = false)
     private String patientName;
@@ -26,12 +26,12 @@ public class Patient {
     @Column(name = "approved", nullable = false)
     private boolean approved;
 
-    public Long getId() {
-        return id;
+    public Long getPatientId() {
+        return patientId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
     }
 
     public String getPatientName() {

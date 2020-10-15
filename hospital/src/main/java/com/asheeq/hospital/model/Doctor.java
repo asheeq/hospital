@@ -8,7 +8,7 @@ public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "doctor_id")
-    private Long id;
+    private Long doctorId;
 
     @Column(name = "doctor_name", nullable = false)
     private String doctorName;
@@ -51,12 +51,12 @@ public class Doctor {
         this.approved = approved;
     }
 
-    public Long getId() {
-        return id;
+    public Long getDoctorId() {
+        return doctorId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDoctorId(Long doctorId) {
+        this.doctorId = doctorId;
     }
 
     public String getDepartmentName() {

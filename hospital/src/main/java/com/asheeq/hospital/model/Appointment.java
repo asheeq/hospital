@@ -10,7 +10,7 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "appointment_id")
-    private Long id;
+    private Long appointmentId;
 
     @ManyToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "patient_id", nullable = false)
@@ -26,12 +26,12 @@ public class Appointment {
     @Column(name = "approved", nullable = false)
     private boolean approved;
 
-    public Long getId() {
-        return id;
+    public Long getAppointmentId() {
+        return appointmentId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setAppointmentId(Long appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
     public Patient getPatient() {
