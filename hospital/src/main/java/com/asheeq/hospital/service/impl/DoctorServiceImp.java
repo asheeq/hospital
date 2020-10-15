@@ -1,0 +1,42 @@
+package com.asheeq.hospital.service.impl;
+
+import com.asheeq.hospital.model.Department;
+import com.asheeq.hospital.model.Doctor;
+import com.asheeq.hospital.repository.DepartmentRepository;
+import com.asheeq.hospital.repository.DoctorRepository;
+import com.asheeq.hospital.service.DoctorService;
+
+import java.util.List;
+import java.util.Optional;
+
+public class DoctorServiceImp implements DoctorService {
+
+    private final DoctorRepository doctorRepository;
+    private final DepartmentRepository departmentRepository;
+
+    public DoctorServiceImp(DoctorRepository doctorRepository, DepartmentRepository departmentRepository) {
+        this.doctorRepository = doctorRepository;
+        this.departmentRepository = departmentRepository;
+
+    }
+
+    @Override
+    public Optional<Doctor> findByDoctorId(long doctorId) {
+        return doctorRepository.findByDoctorId(doctorId);
+    }
+
+    @Override
+    public Optional<Department> findByDepartmentId(long doctorId) {
+        return departmentRepository.findByDepartmentId(doctorId);
+    }
+
+    @Override
+    public List<Doctor> findAllByApprovedIsFalse() {
+        return null;
+    }
+
+    @Override
+    public Doctor save(Doctor doctor) {
+        return doctorRepository.saveAndFlush(doctor);
+    }
+}

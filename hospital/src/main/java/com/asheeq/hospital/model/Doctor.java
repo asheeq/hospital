@@ -11,7 +11,7 @@ public class Doctor {
     private Long id;
 
     @Column(name = "doctor_name", nullable = false)
-    private String departmentName;
+    private String doctorName;
 
     @Column(name = "doctor_age", nullable = false)
     private Long doctorAge;
@@ -28,6 +28,29 @@ public class Doctor {
     @Column(name = "visiting_time", nullable = false)
     private String visitingTime;
 
+    @Column(name = "approved", nullable = false)
+    private boolean approved;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id", referencedColumnName = "department_id", nullable = false)
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
     public Long getId() {
         return id;
     }
@@ -37,11 +60,11 @@ public class Doctor {
     }
 
     public String getDepartmentName() {
-        return departmentName;
+        return doctorName;
     }
 
     public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
+        this.doctorName = departmentName;
     }
 
     public Long getDoctorAge() {
