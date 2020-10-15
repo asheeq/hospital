@@ -26,13 +26,14 @@ public class DoctorServiceImp implements DoctorService {
     }
 
     @Override
-    public Optional<Department> findByDepartmentId(long doctorId) {
-        return departmentRepository.findByDepartmentId(doctorId);
+    public Optional<Doctor> getDepartment(Department department) {
+        return doctorRepository.getDepartment(department);
     }
 
     @Override
     public List<Doctor> findAllByApprovedIsFalse() {
-        return null;
+
+        return doctorRepository.findAllByApprovedIsFalse();
     }
 
     @Override
