@@ -2,6 +2,7 @@ package com.asheeq.hospital.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "appointments")
@@ -14,10 +15,12 @@ public class Appointment {
 
     @ManyToOne
     @JoinColumn(name = "patient_id", referencedColumnName = "patient_id", nullable = false)
+    @NotNull
     private Patient patient;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id", referencedColumnName = "doctor_id", nullable = false)
+    @NotNull
     private Doctor doctor;
 
     @Column(name = "appointment_time", nullable = false)

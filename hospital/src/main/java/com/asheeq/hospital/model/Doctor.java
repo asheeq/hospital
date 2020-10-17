@@ -1,6 +1,8 @@
 package com.asheeq.hospital.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.Collection;
 
 @Entity
 @Table(name = "doctors")
@@ -33,23 +35,8 @@ public class Doctor {
 
     @ManyToOne
     @JoinColumn(name = "department_id", referencedColumnName = "department_id", nullable = false)
+    @NotNull
     private Department department;
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
-
-    public boolean isApproved() {
-        return approved;
-    }
-
-    public void setApproved(boolean approved) {
-        this.approved = approved;
-    }
 
     public Long getDoctorId() {
         return doctorId;
@@ -59,12 +46,12 @@ public class Doctor {
         this.doctorId = doctorId;
     }
 
-    public String getDepartmentName() {
+    public String getDoctorName() {
         return doctorName;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.doctorName = departmentName;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
     public Long getDoctorAge() {
@@ -107,4 +94,19 @@ public class Doctor {
         this.visitingTime = visitingTime;
     }
 
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 }

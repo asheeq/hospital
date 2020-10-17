@@ -26,8 +26,8 @@ public class DoctorServiceImp implements DoctorService {
     }
 
     @Override
-    public Optional<Doctor> getDepartment(Department department) {
-        return doctorRepository.getDepartment(department);
+    public Optional<Doctor> findByDepartment(Department department) {
+        return doctorRepository.findByDepartment(department);
     }
 
     @Override

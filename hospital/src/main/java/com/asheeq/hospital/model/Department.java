@@ -1,5 +1,6 @@
 package com.asheeq.hospital.model;
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "departments")
@@ -12,6 +13,7 @@ public class Department {
 
     @Column(name = "department_name", nullable = false)
     private String departmentName;
+
 
     public Long getDepartmentId() {
         return departmentId;

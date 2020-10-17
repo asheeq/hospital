@@ -1,6 +1,7 @@
 package com.asheeq.hospital.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "patients")
@@ -25,6 +26,7 @@ public class Patient {
 
     @Column(name = "approved", nullable = false)
     private boolean approved;
+
 
     public Long getPatientId() {
         return patientId;

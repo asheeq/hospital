@@ -5,6 +5,8 @@ import com.asheeq.hospital.repository.DepartmentRepository;
 import com.asheeq.hospital.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,6 +32,11 @@ public class DepartmentServiceImp implements DepartmentService {
     @Override
     public Department save(Department department) {
         return departmentRepository.saveAndFlush(department);
+    }
+
+    @Override
+    public List<Department> findAll() {
+        return departmentRepository.findAll();
     }
 
 }
