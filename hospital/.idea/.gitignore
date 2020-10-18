@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../:\Users\Original Windows\IdeaProjects\hospital\.idea/dataSources/
+/../../../../../../../:\Users\Original Windows\Downloads\spring-boot-application-run\spring-boot-application-run\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

@@ -33,7 +33,7 @@ public class Doctor {
     @Column(name = "approved", nullable = false)
     private boolean approved;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "department_id", referencedColumnName = "department_id", nullable = false)
     @NotNull
     private Department department;
