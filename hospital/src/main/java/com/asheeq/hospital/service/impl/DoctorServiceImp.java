@@ -5,10 +5,11 @@ import com.asheeq.hospital.model.Doctor;
 import com.asheeq.hospital.repository.DepartmentRepository;
 import com.asheeq.hospital.repository.DoctorRepository;
 import com.asheeq.hospital.service.DoctorService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class DoctorServiceImp implements DoctorService {
 
     private final DoctorRepository doctorRepository;
@@ -26,7 +27,7 @@ public class DoctorServiceImp implements DoctorService {
     }
 
     @Override
-    public Optional<Doctor> findByDepartment(Department department) {
+    public List<Doctor> findByDepartment(Department department) {
         return doctorRepository.findByDepartment(department);
     }
 

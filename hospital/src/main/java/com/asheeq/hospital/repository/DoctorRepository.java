@@ -12,7 +12,7 @@ public interface DoctorRepository extends JpaRepository<Doctor, Long> {
 
     Optional<Doctor> findByDoctorId(@Param("doctor_id") long doctorId);
 
-    Optional<Doctor> findByDepartment(Department department);
+    List<Doctor> findByDepartment(Department department);
 
     List<Doctor> findAllByApprovedIsFalse();
 }

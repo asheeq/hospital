@@ -7,7 +7,7 @@ import com.asheeq.hospital.model.Doctor;
 public interface DoctorService {
 
     Optional<Doctor> findByDoctorId(long doctorId);
-    Optional<Doctor> findByDepartment(Department department);
+    List<Doctor> findByDepartment(Department department);
     List<Doctor> findAllByApprovedIsFalse();
     Doctor save(Doctor doctor);
 }

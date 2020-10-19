@@ -1,7 +1,6 @@
 package com.asheeq.hospital.controller;
 
 import com.asheeq.hospital.model.Appointment;
-import com.asheeq.hospital.model.Department;
 import com.asheeq.hospital.service.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -44,7 +43,7 @@ public class AppointmentController {
             return "Failed to save Appointment";
         } else {
             appointmentService.save(appointment);
-            return "redirect:/";
+            return "Appointment Saved";
         }
     }
 }
