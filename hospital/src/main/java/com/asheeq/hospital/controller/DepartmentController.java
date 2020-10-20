@@ -7,10 +7,7 @@ import com.asheeq.hospital.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -18,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/department")
+@CrossOrigin("http://localhost:3000")
 public class DepartmentController {
 
     private final DepartmentService departmentService;
@@ -30,7 +28,7 @@ public class DepartmentController {
     }
 
     @RequestMapping(name = "/", method = RequestMethod.GET)
-    public List department(Model model){
+    public List<Department> department(Model model){
         List<Department> departments = departmentService.findAll() ;
 
         if(!departments.isEmpty()){
@@ -55,7 +53,7 @@ public class DepartmentController {
     }
 
     @RequestMapping(value = "/{departmentName}", method = RequestMethod.GET)
-    public String getDoctors(@PathVariable String departmentName,
+    public List<Doctor> getDoctors(@PathVariable String departmentName,
                                   Model model) {
 
         Optional<Department> optionalDepartment = departmentService.findByDepartmentName(departmentName);
@@ -66,10 +64,7 @@ public class DepartmentController {
 
             if (!doctors.isEmpty()) {
                 model.addAttribute("doctors", doctors);
-                return "Doctors Found";
-            }
-            else{
-                return "No Doctors Found";
+                return doctors;
             }
         }
         return null;

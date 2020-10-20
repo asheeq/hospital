@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import ErrorComponent from './components/ErrorComponent.js'
+import SuccessComponent from './components/SuccessComponent.js'
 import HeaderComponent from './components/HeaderComponent.js'
 import FooterComponent from './components/FooterComponent.js'
 import HomeComponent from './components/HomeComponent.js'
@@ -40,6 +41,7 @@ class App extends Component {
                 <Route exact path="/admin/patients" component={PatientApprovalComponent}/>
                 <Route exact path="/admin/appointments" component={AppointmentApprovalComponent}/>
                 <Route exact path="/signup/doctor" component={SignupDoctorComponent}/>
+                <Route exact path="/success" component={SuccessComponent}/>
                 <Route component={ErrorComponent}/>
               </Switch>
             <FooterComponent/>

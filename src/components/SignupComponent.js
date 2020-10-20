@@ -14,7 +14,7 @@ function SignupComponent(){
                     <input className="input-box" type="text" placeholder="Phone No." required /><br></br>
                     <input className="input-box" type="text" placeholder="Gender" required /><br></br>
                     <input className="input-box" type="number" placeholder="Age" required /><br></br>
-                    <button className="btn btn-success login">Submit</button>
+                    <a className="btn btn-success" href="/success">Submit</a>
                     <h1>Register as a doctor?</h1>
                     <h2>Register <Link to="/signup/doctor">here</Link>.</h2>
                 </div>

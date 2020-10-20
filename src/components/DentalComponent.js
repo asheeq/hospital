@@ -1,14 +1,25 @@
 import React, {Component} from 'react'
+import axios from 'axios'
+
 class DentalComponent extends Component{
     constructor(props){
         super (props)
         this.state = {
             doctors: [
-                { name: "Prof. A Rahman", designation: "MBBS FCPS FRCS", visitngTime: "Everyday 7pm to 10pm"},
-                { name: "Dr. B Rahman", designation: "MBBS FCPS", visitngTime: "Sunday to Thursday 4pm to 10pm"},
-                { name: "Dr. C Rahman", designation: "MBBS", visitngTime: "Monday to Wednesday 10am to 4pm"}
+                // { name: "Prof. A Rahman", designation: "MBBS FCPS FRCS", visitngTime: "Everyday 7pm to 10pm"},
+                // { name: "Dr. B Rahman", designation: "MBBS FCPS", visitngTime: "Sunday to Thursday 4pm to 10pm"},
+                // { name: "Dr. C Rahman", designation: "MBBS", visitngTime: "Monday to Wednesday 10am to 4pm"}
             ]
         }
+    }
+
+    componentDidMount(){
+        axios.get('http://localhost:8080/department/dental')
+            .then(
+                response => {
+                    this.setState({ doctors: response.data || [] })
+                }
+            )
     }
     
     render(){
@@ -34,7 +45,7 @@ class DentalComponent extends Component{
                                             <td>{doctor.name}</td>
                                             <td>{doctor.designation}</td>
                                             <td>{doctor.visitngTime}</td>
-                                            <td><a className="btn btn-success" href="/">Appointment</a></td>
+                                            <td><a className="btn btn-success" href="/success">Appointment</a></td>
                                         </tr>
                                     )
                                 }
