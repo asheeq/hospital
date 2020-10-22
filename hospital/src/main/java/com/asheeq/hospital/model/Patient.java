@@ -24,7 +24,7 @@ public class Patient {
     private String password;
 
 
-    @Column(name = "approved", nullable = false)
+    @Column(name = "approved", columnDefinition = "boolean default false")
     private boolean approved;
 
 

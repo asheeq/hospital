@@ -35,7 +35,7 @@ class App extends Component {
                 <Route exact path="/department/cardiology" component={CardiologyComponent}/>
                 <Route exact path="/department/dental" component={DentalComponent}/>
                 <Route exact path="/login" component={LoginComponent}/>
-                <Route exact path="/signup" component={SignupComponent}/>
+                <Route exact path="/signup/patient" component={SignupComponent}/>
                 <Route exact path="/admin" component={AdminComponent}/>
                 <Route exact path="/admin/doctors" component={DoctorApprovalComponent}/>
                 <Route exact path="/admin/patients" component={PatientApprovalComponent}/>

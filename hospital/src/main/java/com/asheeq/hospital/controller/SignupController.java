@@ -6,6 +6,7 @@ import com.asheeq.hospital.service.DoctorService;
 import com.asheeq.hospital.service.PatientService;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ public class SignupController {
         this.patientService = patientService;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/patient", method = RequestMethod.POST)
     public String createNewPatient(@Valid Patient patient,
                                 BindingResult bindingResult,
                                 Model model) {
@@ -32,11 +33,11 @@ public class SignupController {
 
         if (!bindingResult.hasErrors()) {
             patientService.save(patient);
-            model.addAttribute("successMessage", "Please wait for Admin approval.");
+            System.out.println(patient.getPatientName());
             model.addAttribute("patients", new Patient());
         }
 
-        return "/";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/doctor", method = RequestMethod.POST)
@@ -47,7 +48,6 @@ public class SignupController {
 
         if (!bindingResult.hasErrors()) {
             doctorService.save(doctor);
-            model.addAttribute("successMessage", "Please wait for Admin approval.");
             model.addAttribute("doctors", new Doctor());
         }
 

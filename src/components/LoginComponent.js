@@ -13,7 +13,7 @@ function LoginComponent(){
                     <a className="btn btn-success" href="/">Submit</a>
                 </div>
                 <h1>Don't have any account?</h1>
-                <h2>Signup <Link to="/signup">here</Link>.</h2>
+                <h2>Signup <Link to="/signup/patient">here</Link>.</h2>
             </div>
         </>
     )
