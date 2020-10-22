@@ -26,7 +26,7 @@ public class SignupController {
     }
 
     @RequestMapping(value = "/patient", method = RequestMethod.POST)
-    public String createNewPatient(@Valid Patient patient,
+    public String createNewPatient(@RequestBody Patient patient,
                                 BindingResult bindingResult,
                                 Model model) {
 
@@ -41,7 +41,7 @@ public class SignupController {
     }
 
     @RequestMapping(value = "/doctor", method = RequestMethod.POST)
-    public String createNewDoctor(@Valid Doctor doctor,
+    public String createNewDoctor(@RequestBody Doctor doctor,
                                    BindingResult bindingResult,
                                    Model model) {
 
@@ -51,7 +51,7 @@ public class SignupController {
             model.addAttribute("doctors", new Doctor());
         }
 
-        return "/registration/doctor";
+        return "redirect:/";
     }
 
 }

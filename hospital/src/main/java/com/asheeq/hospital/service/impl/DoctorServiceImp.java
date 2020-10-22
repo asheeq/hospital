@@ -39,6 +39,8 @@ public class DoctorServiceImp implements DoctorService {
 
     @Override
     public Doctor save(Doctor doctor) {
+
+        //doctor.setDepartment(doctor.departmentId);
         return doctorRepository.saveAndFlush(doctor);
     }
 }

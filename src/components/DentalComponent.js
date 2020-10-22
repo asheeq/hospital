@@ -42,9 +42,9 @@ class DentalComponent extends Component{
                                     this.state.doctors.map(
                                         doctor => 
                                         <tr>
-                                            <td>{doctor.name}</td>
-                                            <td>{doctor.designation}</td>
-                                            <td>{doctor.visitngTime}</td>
+                                            <td>{doctor.doctorName}</td>
+                                            <td>{doctor.degree}</td>
+                                            <td>{doctor.visitingTime}</td>
                                             <td><a className="btn btn-success" href="/success">Appointment</a></td>
                                         </tr>
                                     )

@@ -30,11 +30,11 @@ public class Doctor {
     @Column(name = "visiting_time", nullable = false)
     private String visitingTime;
 
-    @Column(name = "approved", nullable = false)
+    @Column(name = "approved", columnDefinition = "boolean default false")
     private boolean approved;
 
-    @OneToOne
-    @JoinColumn(name = "department_id", referencedColumnName = "department_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "department_id", referencedColumnName = "department_id")
     @NotNull
     private Department department;
 
@@ -100,13 +100,5 @@ public class Doctor {
 
     public void setApproved(boolean approved) {
         this.approved = approved;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 }
