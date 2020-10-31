@@ -23,7 +23,12 @@ class DepartmentComponent extends Component {
         super(props);
         
         this.state = {
-            departments:[]
+            departments:[
+                {id: 1, departmentName: "cardiology"},
+                {id: 2, departmentName: "dermatology"},
+                {id: 3, departmentName: "dental"},
+                {id: 4, departmentName: "medicine"}
+            ]
         }
     } 
 
@@ -45,7 +50,7 @@ class DepartmentComponent extends Component {
                         {
                             this.state.departments.map(
                                         department => 
-                                        <Link to={`/department/${department.departmentName}`}><button class="button button5"><span>{department.departmentName.charAt(0).toUpperCase() + department.departmentName.slice(1)}</span></button></Link>
+                                        <Link key={department.id} to={`/department/${department.departmentName}`}><button class="button button5"><span>{department.departmentName.charAt(0).toUpperCase() + department.departmentName.slice(1)}</span></button></Link>
                                     )
                         }
                    </div>

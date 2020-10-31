@@ -7,10 +7,10 @@ class SignupComponent extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            patientName: "",
-            email: "",
-            password: null,
-            patientAge: null
+            patientName: "test",
+            email: "test@gmail.com",
+            password: "password",
+            patientAge: 25
         }
         this.handleChange = this.handleChange.bind(this);
     }
